@@ -408,29 +408,37 @@ body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--
     </div>
   </div>
 
-  <!-- FLASHCARD DECK -->
-  <div id="flashcard-wrap" style="display:none;">
-    <div class="fc-wrapper">
-      <div class="fc-top-row">
-        <div class="fc-domain-pill" id="fc-domain-pill">—</div>
-        <div class="fc-counter" id="fc-counter">1 / —</div>
+  <!-- FLASHCARD FULL-SCREEN OVERLAY -->
+  <div class="fc-overlay" id="fc-overlay">
+    <div class="fc-overlay-header">
+      <div class="fc-overlay-brand">
+        Markz Belajar
+        <span id="fc-domain-pill">—</span>
       </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div class="fc-counter" id="fc-counter">1 / —</div>
+        <button class="fc-overlay-close" onclick="closeOverlay()" title="Kembali ke form">
+          <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="fc-overlay-body">
       <div class="fc-deck" id="fc-deck">
         <div class="fc-hint-prev" id="fc-hint-prev">← Kembali</div>
         <div class="fc-hint-next" id="fc-hint-next">Lanjut →</div>
         <div class="fc-card settle" id="fc-card"><!-- rendered by JS --></div>
       </div>
-      <div class="fc-nav">
-        <button class="fc-nav-btn fc-prev" id="fc-prev" onclick="fcGo(-1)">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
-          Sebelumnya
-        </button>
-        <button class="fc-nav-btn fc-skip" id="fc-skip" onclick="fcGo(1)">
-          Lewati
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
-        </button>
-      </div>
-      <div class="fc-swipe-hint">Geser kartu ke kiri atau kanan untuk navigasi</div>
+    </div>
+    <div class="fc-overlay-nav">
+      <button class="fc-nav-btn fc-prev" id="fc-prev" onclick="fcGo(-1)">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+        Sebelumnya
+      </button>
+      <button class="fc-nav-btn fc-skip" id="fc-skip" onclick="fcGo(1)">
+        Lewati
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+      <div class="fc-swipe-hint">Geser kartu untuk navigasi</div>
     </div>
   </div>
 
@@ -751,7 +759,6 @@ function selectAge(ageKey) {
   document.querySelectorAll(".age-btn").forEach(b => b.classList.remove("selected"));
   document.querySelector(`[data-age="${ageKey}"]`).classList.add("selected");
   Object.keys(answers).forEach(k => delete answers[k]);
-  // Flatten all questions
   flatQuestions = [];
   currentItems.forEach(domain => {
     domain.items.forEach((item, idx) => {
@@ -759,15 +766,19 @@ function selectAge(ageKey) {
     });
   });
   fcIndex = 0;
-  document.getElementById("flashcard-wrap").style.display = "block";
+  document.getElementById("fc-overlay").classList.add("open");
+  document.body.style.overflow = "hidden";
   renderCard(0, "none");
   initSwipe();
   updateProgress();
   checkShowSubmit();
   document.getElementById("result-parent").classList.remove("show");
   document.getElementById("submit-section").style.display = "none";
-  // Scroll to flashcard
-  setTimeout(() => document.getElementById("flashcard-wrap").scrollIntoView({behavior:"smooth", block:"start"}), 100);
+}
+
+function closeOverlay() {
+  document.getElementById("fc-overlay").classList.remove("open");
+  document.body.style.overflow = "";
 }
 
 function renderCard(index, direction) {
@@ -951,10 +962,11 @@ function checkShowSubmit() {
 }
 
 function submitForm() {
+  closeOverlay();
   document.getElementById("result-parent").classList.add("show");
   document.getElementById("submit-section").style.display = "none";
   buildParentProfile();
-  window.scrollTo({top:document.getElementById("result-parent").offsetTop-80,behavior:"smooth"});
+  window.scrollTo({top:0, behavior:"smooth"});
 }
 
 function buildParentProfile() {
