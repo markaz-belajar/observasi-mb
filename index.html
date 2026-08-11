@@ -557,7 +557,13 @@ const ITEMS_BY_AGE = {
         opts:["Sering, dengan inisiatif yang tinggi","Kadang-kadang memanggil sendiri","Jarang, biasanya hanya saat diajak bicara dulu","Hampir tidak pernah memanggil sendiri"] },
       { q:"Apakah si kecil pernah mengulangi kata atau kalimat yang baru didengar berulang-ulang?",
         example:"Misalnya mengulangi kata dari lagu, iklan TV, atau kalimat yang baru diucapkan orang lain — tanpa konteks yang jelas.",
-        opts:["Tidak, jarang sekali","Sesekali, tapi masih wajar","Cukup sering mengulangi kata atau kalimat orang lain","Sering sekali, seperti rekaman yang diputar ulang"] }
+        opts:["Tidak, jarang sekali","Sesekali, tapi masih wajar","Cukup sering mengulangi kata atau kalimat orang lain","Sering sekali, seperti rekaman yang diputar ulang"] },
+      { q:"Apakah si kecil langsung merespons saat namanya dipanggil dari jarak dekat?",
+        example:"Misalnya Ayah/Bunda memanggil namanya dari ruangan yang sama — apakah ia langsung menoleh, atau seolah tidak mendengar meski pendengarannya normal?",
+        opts:["Selalu merespons dengan segera","Biasanya merespons, kadang perlu dipanggil 2x","Sering tidak merespons, perlu dipanggil beberapa kali","Hampir tidak pernah merespons panggilan namanya"] },
+      { q:"Apakah si kecil pernah kehilangan kata-kata atau kemampuan bicara yang sebelumnya sudah bisa?",
+        example:"Misalnya dulu bisa menyebut 'mama', 'mau', atau beberapa kata, tapi di usia tertentu kata-kata itu menghilang dan tidak kembali lagi.",
+        opts:["Tidak, kemampuan bicaranya selalu berkembang maju","Ada sedikit fluktuasi tapi tidak signifikan","Ya, pernah kehilangan beberapa kata yang sebelumnya bisa","Ya, ada periode kemampuan bicaranya menurun cukup signifikan"] }
     ]},
     { domain:"B", label:"Kebiasaan & rutinitas", clinicalLabel:"Insistence on sameness & restricted interests", icon:"repeat", items:[
       { q:"Bagaimana reaksi si kecil saat rutinitas hariannya berubah?",
@@ -568,7 +574,10 @@ const ITEMS_BY_AGE = {
         opts:["Tidak ada yang seperti itu","Ada benda favorit tapi tidak bergantung berlebihan","Cukup bergantung, rewel jika tidak ada","Sangat bergantung, panik jika kehilangan benda itu"] },
       { q:"Apakah si kecil sering melakukan gerakan tubuh yang sama berulang-ulang?",
         example:"Misalnya melompat-lompat di tempat saat senang, mengepakkan tangan, mengayun badan, atau berputar-putar secara berulang.",
-        opts:["Tidak ada gerakan berulang yang menonjol","Kadang-kadang ada tapi masih wajar","Cukup sering dan terlihat menonjol","Sangat sering, terjadi di berbagai situasi"] }
+        opts:["Tidak ada gerakan berulang yang menonjol","Kadang-kadang ada tapi masih wajar","Cukup sering dan terlihat menonjol","Sangat sering, terjadi di berbagai situasi"] },
+      { q:"Bagaimana cara si kecil bermain dengan mainannya?",
+        example:"Misalnya apakah ia bermain mobil-mobilan dengan wajar (didorong, dibuat cerita), atau justru hanya memutar rodanya berulang-ulang, membalik mainan, atau menyusun benda dalam barisan panjang?",
+        opts:["Bermain dengan cara yang wajar dan imajinatif","Sebagian besar wajar, kadang ada pola berulang","Cukup sering bermain dengan cara tidak biasa (memutar, membalik, berbaris)","Hampir selalu bermain dengan cara yang tidak fungsional"] }
     ]},
     { domain:"C", label:"Kepekaan indera", clinicalLabel:"Sensory processing", icon:"sensor", items:[
       { q:"Bagaimana reaksi si kecil terhadap suara keras atau lingkungan yang ramai?",
@@ -607,7 +616,13 @@ const ITEMS_BY_AGE = {
         opts:["Ya, percakapan berjalan dua arah dengan baik","Kadang mengalihkan topik tapi masih bisa diajak kembali","Sering mendominasi dengan topiknya sendiri","Hampir selalu tidak merespons topik orang lain"] },
       { q:"Apakah si kecil memahami humor ringan atau kalimat tidak harfiah yang biasa dipakai sehari-hari?",
         example:"Misalnya saat dikatakan 'aduh perutku minta makan nih' atau lelucon ringan — apakah ia tertawa dan paham, atau bingung dan mengartikannya secara harfiah?",
-        opts:["Ya, paham humor dan kiasan dengan baik","Kadang paham, kadang perlu dijelaskan","Sering bingung dengan kalimat tidak harfiah","Hampir selalu mengartikan segala sesuatu secara harfiah"] }
+        opts:["Ya, paham humor dan kiasan dengan baik","Kadang paham, kadang perlu dijelaskan","Sering bingung dengan kalimat tidak harfiah","Hampir selalu mengartikan segala sesuatu secara harfiah"] },
+      { q:"Seberapa konsisten si kecil merespons saat namanya dipanggil di rumah?",
+        example:"Misalnya dipanggil untuk makan, atau Ayah/Bunda ingin memberitahu sesuatu — apakah ia merespons atau sering seperti tidak mendengar?",
+        opts:["Selalu merespons dengan baik","Biasanya merespons, kadang perlu dipanggil ulang","Sering tidak merespons, perlu dipanggil beberapa kali","Hampir tidak pernah merespons meski dipanggil berulang"] },
+      { q:"Apakah si kecil pernah mengalami kemunduran dalam bicara atau kemampuan yang sudah dikuasai sebelumnya?",
+        example:"Misalnya pernah lebih banyak bicara tapi tiba-tiba lebih pendiam, atau kemampuan yang sudah bisa tiba-tiba hilang di periode tertentu.",
+        opts:["Tidak, perkembangannya selalu maju","Ada fluktuasi kecil tapi tidak signifikan","Ya, pernah ada periode kemunduran yang cukup terlihat","Ya, ada kemampuan yang hilang dan tidak kembali"] }
     ]},
     { domain:"B", label:"Kebiasaan & rutinitas", clinicalLabel:"Insistence on sameness & restricted interests", icon:"repeat", items:[
       { q:"Bagaimana reaksi si kecil jika ada perubahan mendadak pada rencana atau rutinitas?",
@@ -618,7 +633,10 @@ const ITEMS_BY_AGE = {
         opts:["Ada hobi favorit tapi seimbang dengan kegiatan lain","Ada minat kuat tapi masih bisa dialihkan","Sangat fokus, cukup sulit jika diajak berganti topik/kegiatan","Hanya mau bicara atau melakukan satu hal itu saja"] },
       { q:"Apakah si kecil melakukan gerakan tubuh berulang di saat-saat tertentu?",
         example:"Misalnya mengepakkan tangan saat senang atau tegang, menggigit buku/pensil secara berulang, mengayun badan saat duduk, atau mengetuk-ngetuk meja.",
-        opts:["Tidak ada gerakan berulang yang menonjol","Kadang ada tapi masih wajar","Cukup sering terlihat, terutama saat excited atau gelisah","Sering sekali di berbagai situasi"] }
+        opts:["Tidak ada gerakan berulang yang menonjol","Kadang ada tapi masih wajar","Cukup sering terlihat, terutama saat excited atau gelisah","Sering sekali di berbagai situasi"] },
+      { q:"Bagaimana cara si kecil bermain atau menggunakan benda-benda di sekitarnya?",
+        example:"Misalnya apakah ia bermain dengan mainan secara wajar, atau sering memutar benda berulang-ulang, menyusun mainan dalam barisan, atau fokus pada bagian kecil dari suatu benda?",
+        opts:["Bermain dengan cara yang wajar sesuai fungsinya","Sebagian besar wajar, sesekali ada pola berulang","Cukup sering bermain dengan cara tidak biasa yang menonjol","Hampir selalu bermain dengan cara yang tidak fungsional"] }
     ]},
     { domain:"C", label:"Kepekaan terhadap lingkungan", clinicalLabel:"Sensory processing", icon:"sensor", items:[
       { q:"Bagaimana si kecil merespons suara, cahaya, atau keramaian di sekolah atau tempat umum?",
@@ -668,7 +686,13 @@ const ITEMS_BY_AGE = {
         opts:["Ada minat favorit tapi seimbang","Ada minat kuat tapi masih bisa dialihkan","Minat sangat intens, mendominasi waktu dan pikirannya","Hampir semua energinya tercurah pada satu bidang itu saja"] },
       { q:"Apakah si kecil masih melakukan gerakan atau perilaku berulang di usianya sekarang?",
         example:"Misalnya menggoyangkan kaki saat duduk secara intens, mengulang kata tertentu saat sendiri, atau ritual tertentu sebelum melakukan sesuatu.",
-        opts:["Tidak ada yang menonjol","Kadang-kadang ada tapi masih wajar","Cukup sering dan kadang mengganggu kegiatan","Sering sekali dan sudah memengaruhi keseharian"] }
+        opts:["Tidak ada yang menonjol","Kadang-kadang ada tapi masih wajar","Cukup sering dan kadang mengganggu kegiatan","Sering sekali dan sudah memengaruhi keseharian"] },
+      { q:"Apakah si kecil merespons dengan baik saat namanya dipanggil atau diajak bicara langsung?",
+        example:"Misalnya dipanggil oleh Ayah/Bunda atau guru — apakah ia langsung merespons, atau sering seperti tidak mendengar meski tidak sedang sibuk?",
+        opts:["Selalu merespons dengan baik","Biasanya merespons, sesekali perlu dipanggil ulang","Sering tidak merespons, perlu usaha ekstra untuk mendapat perhatiannya","Hampir tidak pernah merespons panggilan langsung"] },
+      { q:"Apakah Ayah/Bunda pernah merasa bicara si kecil terdengar 'berbeda' — terlalu formal, terlalu kaku, atau seperti mengulang kalimat yang dihafal?",
+        example:"Misalnya menjawab pertanyaan dengan kalimat lengkap dan formal yang tidak wajar untuk usianya, atau menggunakan frasa yang seperti diambil dari buku atau film.",
+        opts:["Tidak, cara bicaranya natural sesuai usianya","Kadang terdengar sedikit kaku tapi tidak menonjol","Cukup sering terdengar berbeda dari teman seusianya","Hampir selalu terdengar kaku atau seperti hafalan"] }
     ]},
     { domain:"C", label:"Kepekaan terhadap lingkungan", clinicalLabel:"Sensory processing", icon:"sensor", items:[
       { q:"Apakah si kecil mudah kewalahan di lingkungan yang ramai, bising, atau penuh stimulasi?",
@@ -712,7 +736,13 @@ const ITEMS_BY_AGE = {
         opts:["Cukup fleksibel, bisa menerima dengan baik","Kecewa tapi bisa menerima setelah diberi waktu","Cukup sulit menerima, butuh waktu panjang","Sangat sulit menerima, reaksinya berlebihan dibanding situasinya"] },
       { q:"Apakah si kecil punya bidang minat yang jauh lebih dalam dan luas dari teman-temannya?",
         example:"Misalnya pengetahuannya tentang satu topik tertentu sangat mendalam hingga bisa dianggap 'ahli', tapi di bidang lain kurang tertarik sama sekali.",
-        opts:["Ada minat favorit tapi seimbang","Ada bidang favorit yang lebih dalam tapi masih wajar","Minat sangat terkonsentrasi, sulit diajak ke bidang lain","Hampir semua energi dan perhatiannya hanya di satu bidang"] }
+        opts:["Ada minat favorit tapi seimbang","Ada bidang favorit yang lebih dalam tapi masih wajar","Minat sangat terkonsentrasi, sulit diajak ke bidang lain","Hampir semua energi dan perhatiannya hanya di satu bidang"] },
+      { q:"Apakah si kecil merespons dengan wajar saat namanya dipanggil atau diajak berbicara langsung?",
+        example:"Misalnya saat Ayah/Bunda memanggil dari ruangan lain, atau mengajaknya berbicara saat ia sedang tidak sibuk — apakah ia merespons atau sering tidak mendengar?",
+        opts:["Selalu merespons dengan baik dan wajar","Biasanya merespons, sesekali perlu dipanggil ulang","Sering tidak merespons, perlu usaha ekstra","Hampir tidak pernah merespons panggilan langsung"] },
+      { q:"Apakah ada momen di masa kecilnya di mana kemampuan si kecil — bicara, sosial, atau lainnya — sempat menurun dari yang sebelumnya?",
+        example:"Misalnya pernah lebih banyak bicara lalu tiba-tiba lebih pendiam, atau kemampuan sosial yang sempat berkembang lalu tampak mundur di periode tertentu.",
+        opts:["Tidak, perkembangannya selalu maju secara konsisten","Ada fluktuasi kecil tapi tidak signifikan","Ya, pernah ada periode kemunduran yang cukup terlihat","Ya, ada kemampuan yang hilang dan tidak sepenuhnya kembali"] }
     ]},
     { domain:"C", label:"Kepekaan & kenyamanan", clinicalLabel:"Sensory processing & interoception", icon:"sensor", items:[
       { q:"Apakah si kecil mudah kewalahan secara emosional atau sensorik di situasi tertentu?",
